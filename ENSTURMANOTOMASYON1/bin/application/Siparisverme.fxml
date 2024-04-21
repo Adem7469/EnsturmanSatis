@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SiparisvermeController">
+   <children>
+      <SplitPane dividerPositions="0.42410714285714285" layoutX="130.0" layoutY="25.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tbl_urunler" layoutX="91.0" layoutY="-27.0" onMouseClicked="#table_mause_click" prefHeight="187.0" prefWidth="498.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="col_turu" prefWidth="75.0" text="TÜRÜ" />
+                      <TableColumn fx:id="col_marka" prefWidth="75.0" text="MARKASI" />
+                        <TableColumn fx:id="col_ozelikleri" prefWidth="118.0" text="ÖZELİKLERİ" />
+                        <TableColumn fx:id="col_fiyati" prefWidth="71.5" text="FİYATI" />
+                        <TableColumn fx:id="col_adeti" prefWidth="77.5" text="STOK " />
+                        <TableColumn fx:id="col_kod" text="KODU" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #eecfa1;">
+               <children>
+                  <TextField fx:id="txt_ad" layoutX="30.0" layoutY="14.0" promptText="Adınız" />
+                  <TextField fx:id="txt_soyad" layoutX="30.0" layoutY="55.0" promptText="Soyadınız" />
+                  <TextField fx:id="txt_telno" layoutX="30.0" layoutY="92.0" promptText="TelefonNumarası" />
+                  <TextField fx:id="txt_adres" layoutX="30.0" layoutY="128.0" promptText="Adresiniz" />
+                  <TextField fx:id="txt_adet" layoutX="30.0" layoutY="168.0" promptText="Sipariş Adeti" />
+                  <TextField fx:id="txt_kod" layoutX="30.0" layoutY="207.0" promptText="Ürün Kodu" />
+                  <TextField fx:id="txt_arama" layoutX="312.0" layoutY="14.0" promptText="Arama Çubuğu" />
+                  <Label layoutX="237.0" layoutY="18.0" text="Ürün Arama" />
+                  <Label layoutX="235.0" layoutY="84.0" text="Sipariş Tutarı" />
+                  <Label fx:id="lbl_fiyat" layoutX="360.0" layoutY="84.0" text="...." />
+                  <Button fx:id="btn_siparis" layoutX="227.0" layoutY="128.0" mnemonicParsing="false" onAction="#btn_siparis_click" prefHeight="25.0" prefWidth="85.0" text="Sipariş Ver" />
+                  <Label fx:id="lbl_mesaj" layoutX="235.0" layoutY="211.0" text="...." />
+                  <Button fx:id="txt_sifreyenile" layoutX="396.0" layoutY="116.0" mnemonicParsing="false" onAction="#txt_sifreyenile_click" text="Şifre Yenileme" />
+                  <Button fx:id="btn_geri" layoutX="450.0" layoutY="168.0" mnemonicParsing="false" onAction="#btn_geri_click" text="Geri" />
+                  <Button fx:id="btn_siparislerim" layoutX="396.0" layoutY="141.0" mnemonicParsing="false" onAction="#btn_siparislerim_click" prefHeight="25.0" prefWidth="92.0" text="Siparişlerim" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

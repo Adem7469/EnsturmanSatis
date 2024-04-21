@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SiparislerimController">
+   <children>
+      <SplitPane dividerPositions="0.44472361809045224" layoutX="108.0" layoutY="54.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tbl_siparislerim" layoutX="33.0" layoutY="-33.0" onMouseClicked="#tbl_siparislerim_click" prefHeight="174.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="col_ad" prefWidth="70.0" text="Adı" />
+                      <TableColumn fx:id="col_soyad" prefWidth="77.5" text="Soyadı" />
+                        <TableColumn fx:id="col_no" prefWidth="76.0" text="Numarası" />
+                        <TableColumn fx:id="col_adres" prefWidth="66.5" text="Adresi" />
+                        <TableColumn fx:id="col_adet" prefWidth="78.5" text="Sipariş Adeti" />
+                        <TableColumn fx:id="col_tutar" prefWidth="86.5" text="Sipariş Tutarı" />
+                        <TableColumn fx:id="col_kod" prefWidth="41.5" text="Kodu" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #eecfa1;">
+               <children>
+                  <TextField fx:id="txt_ad" layoutX="21.0" layoutY="12.0" />
+                  <TextField fx:id="txt_soyad" layoutX="21.0" layoutY="68.0" />
+                  <TextField fx:id="txt_adres" layoutX="264.0" layoutY="12.0" />
+                  <TextField fx:id="txt_adet" layoutX="264.0" layoutY="68.0" />
+                  <Label layoutX="264.0" layoutY="129.0" text="Siparis Tutarı" />
+                  <Label fx:id="lbl_tutar" layoutX="373.0" layoutY="130.0" text="....." />
+                  <Label fx:id="lbl_mesaj" layoutX="16.0" layoutY="243.0" text="...." />
+                  <Button fx:id="btn_silme" layoutX="262.0" layoutY="175.0" mnemonicParsing="false" onAction="#btn_silme_click" prefHeight="25.0" prefWidth="72.0" text="Silme" />
+                  <Button fx:id="btn_guncele" layoutX="377.0" layoutY="175.0" mnemonicParsing="false" onAction="#btn_guncele_click" prefHeight="25.0" prefWidth="72.0" text="Güncele" />
+                  <Button fx:id="btn_geri" layoutX="21.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn_geri_click" prefHeight="25.0" prefWidth="55.0" text="Geri" />
+                  <Button fx:id="txt_getir" layoutX="21.0" layoutY="126.0" mnemonicParsing="false" onAction="#txt_getir_click" prefHeight="25.0" prefWidth="95.0" text="Getir" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

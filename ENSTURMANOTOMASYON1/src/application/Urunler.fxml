@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="387.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UrunlerController">
+   <children>
+      <AnchorPane prefHeight="398.0" prefWidth="458.0">
+         <children>
+            <SplitPane dividerPositions="0.4271356783919598" layoutX="-10.0" orientation="VERTICAL" prefHeight="398.0" prefWidth="468.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="166.0" prefWidth="456.0">
+                     <children>
+                        <TableView fx:id="tbl_urunler" layoutX="8.0" layoutY="-33.0" onMouseClicked="#table_mauseClick" prefHeight="166.0" prefWidth="458.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="col_id" prefWidth="52.5" text="ID" />
+                              <TableColumn fx:id="col_turu" prefWidth="61.5" text="TÜRÜ" />
+                              <TableColumn fx:id="col_marka" prefWidth="69.5" text="MARKASI" />
+                              <TableColumn fx:id="col_ozelikleri" prefWidth="74.5" text="ÖZELİKLERİ" />
+                              <TableColumn fx:id="col_fiyati" prefWidth="68.0" text="FİYATI" />
+                              <TableColumn fx:id="col_adeti" prefWidth="64.5" text="ADETİ" />
+                              <TableColumn fx:id="col_kod" prefWidth="68.0" text="KODU" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="461.0" style="-fx-background-color: #eecfa1;">
+                     <children>
+                        <TextField fx:id="txt_turu" layoutX="36.0" layoutY="14.0" promptText="Ürün Türü" />
+                        <TextField fx:id="txt_markasi" layoutX="36.0" layoutY="58.0" promptText="Ürün Markası" />
+                        <TextField fx:id="txt_ozelikleri" layoutX="36.0" layoutY="100.0" promptText="Ürün Özelikleri" />
+                        <TextField fx:id="txt_fiyati" layoutX="36.0" layoutY="136.0" promptText="Ürün Fiyatı" />
+                        <TextField fx:id="txt_adeti" layoutX="36.0" layoutY="178.0" promptText="Ürün Adeti" />
+                        <Button fx:id="btn_ekle" layoutX="245.0" layoutY="68.0" mnemonicParsing="false" onAction="#btn_ekle_click" prefHeight="31.0" prefWidth="99.0" text="Ürün Ekle" />
+                        <Button fx:id="btn_sil" layoutX="245.0" layoutY="121.0" mnemonicParsing="false" onAction="#btn_sil_click" prefHeight="31.0" prefWidth="99.0" text="Ürün Sil" />
+                        <Button fx:id="btn_guncele" layoutX="245.0" layoutY="175.0" mnemonicParsing="false" onAction="#btn_guncele_click" prefHeight="31.0" prefWidth="99.0" text="Ürünü Güncele" />
+                        <TextField fx:id="txt_kod" layoutX="245.0" layoutY="14.0" promptText="Ürün Kodu" />
+                        <Button fx:id="btn_geri" layoutX="420.0" layoutY="166.0" mnemonicParsing="false" onAction="#btn_geri_click" text="Geri" />
+                        <Button fx:id="btn_siparisler" layoutX="370.0" layoutY="113.0" mnemonicParsing="false" onAction="#btn_siparisler_click" prefHeight="25.0" prefWidth="88.0" text="Siparişler" />
+                        <Button fx:id="btn_kulanici" layoutX="370.0" layoutY="140.0" mnemonicParsing="false" onAction="#btn_kulanici_click" prefHeight="25.0" prefWidth="88.0" text="Kulanıcı Kayıt" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

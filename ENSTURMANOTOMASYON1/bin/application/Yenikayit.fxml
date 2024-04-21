@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.YenikayitController">
+   <children>
+      <AnchorPane prefHeight="310.0" prefWidth="210.0" style="-fx-background-color: #eecfa1;">
+         <children>
+            <TextField fx:id="txt_kulanici" layoutX="26.0" layoutY="29.0" promptText="Kulanıcı Adı" />
+            <TextField fx:id="txt_sifre" layoutX="26.0" layoutY="85.0" promptText="Şifre" />
+            <TextField fx:id="txt_sifretekrar" layoutX="26.0" layoutY="138.0" promptText="Şifre Tekrar" />
+            <Button fx:id="btn_kaydet" layoutX="67.0" layoutY="240.0" mnemonicParsing="false" onAction="#btn_kaydet_click" prefHeight="25.0" prefWidth="66.0" text="Kaydet" />
+            <Label fx:id="lbl_mesaj" layoutX="26.0" layoutY="184.0" text="..." />
+            <Button fx:id="btn_geri" layoutX="81.0" layoutY="271.0" mnemonicParsing="false" onAction="#btn_geri_click" text="Geri" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
